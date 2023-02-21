@@ -1,0 +1,96 @@
+body{
+    background-color:#344a72;
+    font-family:'Roboto',sans-serif;
+  }
+  .signup-box{
+    width:380px;
+    height:590px;
+    background:white;
+    margin:auto;
+    border-radius:5px;
+  }
+  .login{
+    width:350px;
+    height:270px;
+    background:white;
+    margin:auto;
+    border-radius:5px;
+  }
+  h1{
+    text-align:center;
+    margin-top:50px;
+  }
+  h4{
+    text-align:center;
+  }
+  
+  form{
+    width:300px;
+    margin-left:20px;
+  }
+  form label{
+    display:flex;
+    margin-top:15px;
+    font-size:18px;
+  }
+  input{
+    width:300px;
+    padding:7px;
+    border:none;
+    border:1px solid grey;
+    border-radius:5px;
+    outline:none;
+  }
+  input[type="submit"]{
+     width:317px;
+     height:35px;
+    margin-top:20px;
+    color:white;
+    background-color:#49c1a2;
+    border:none;
+    font-size:18px;
+  }
+  input[type="submit"]:hover{
+    background-color: red;
+    color:white;
+  }
+  input[type="submit"]:active{
+    background-color: rgb(66, 26, 26);
+    color:rgb(253, 247, 247);
+  }
+  p
+  {
+    text-align:center;
+    padding-top:20px;
+    font-size:15px;
+  }
+  .already{
+  color:white;
+  text-align:center;
+    font-size:15px;
+    margin-top:-10px;
+  }
+  .already a{
+    color:#49c1a2;
+  }
+@media only screen and (min-width:224px) and (max-width:567px){
+    .signup-box{
+      width:250px;
+      }
+      .login{
+        width:250px;
+      }
+      input{
+        width:200px;
+      }
+      input[type="submit"]{
+        width:200px;
+        margin-left:9px;
+      }
+      p{
+        font-size:10px;
+      }
+      .already{
+        font-size:10px;
+      }
+}
