@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="signup-box">
+    <h1> Sign Up</h1>
+    <h4>It will hardly take a minute for sign up </h4>
+    <form name="submit-to-google-sheet">
+      <label> First Name </label>
+      <input type ="text" name="First name" required="">
+       <label> Last Name </label>
+      <input type ="text" name="Last name" required="">
+       <label> Email </label>
+      <input type ="text" name="email" required="">
+        <label> Password</label>
+      <input type ="text" name="password" required="">
+       <label> Confirm password </label>
+      <input type ="text" name="confirm password" required="">
+      <input type="submit" value="submit">
+    </form> 
+    <p>By clicking the Sign Up button,you agree to our <br> <a href="#">Terms and Conditions </a>  and <a href="#"> privacy policy</a></p>
+  </div>
+     <p class="already"> Already have an account? <a href="login.html"> Login here</a> </p>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzeepBicgNYpO_9eQ5UgYCPzqy-LJhaMPS2Fu7uDDlRjsCJB9PjMzr2NmrcP_Sqxzhm/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+
+</html>
